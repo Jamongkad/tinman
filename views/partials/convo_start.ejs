@@ -2,7 +2,7 @@
     <h4>{{title}}</h4>
 </div>
 <div class="modal-body">
-    <p>{{text}}</p>
+    <div ng-bind-html="text"></div>
 </div>
 <div class="modal-footer" style="text-align:left">
     <p ng-repeat="i in msg" >

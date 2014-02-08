@@ -1,3 +1,18 @@
-Exploratorium
-Console contains more text.
-Command line accepts text higlights it and gamectrl does something with the text like open up menus or drive the story further.
+Notes:
+Interactions with enemy ship should be done via crew.
+
+Steps: 
+1. Navigator tells captain they have arrived in the Beta Node Star Cluster.
+2. Captain can call status on each station.
+3. Tactical will ask permission to do wide range sensor sweep. 
+   a) Wide range sensor sweep mini game commences.
+       * wide range shows possible locations. 3 possible.
+       * short range sensor sweeps identify specific objects.
+       * going to to locations eats up time. timer ticks down.
+4. Navigator will suggest to captain which sector to take. Choose out of 3 to position ship. 
+
+
+Win Condition
+    Alien ship agrees to go with you for testing.
+Lost Condition
+    Time runs out, Entropy-2 goes supernova.

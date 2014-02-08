@@ -14,18 +14,18 @@ angular.module('commandline', [])
                 var command = commands[0];
                 var object = commands[1];
 
-                if($scope.command != "" && object && (command == "call" || command == "inspect" || command == "talk" || command == "help")) {  
+                if($scope.command != "" && object && (command == "report" || command == "inspect" || command == "talk" || command == "help")) {  
 
-                    if(command == "call") { 
+                    if(command == "report") { 
                         var find = _.find(Bridge, function(obj) { 
-                            return obj.officer == object;
+                            return obj.id == object;
                         });
                         $scope.$emit("send-order", find);
                     }
 
                     if(command == "talk") { 
                         var find = _.find(Bridge, function(obj) { 
-                            return obj.officer == object;
+                            return obj.id == object;
                         });
 
                         find.main.speak();
