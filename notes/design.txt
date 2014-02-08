@@ -1,0 +1,3 @@
+Exploratorium
+Console contains more text.
+Command line accepts text higlights it and gamectrl does something with the text like open up menus or drive the story further.

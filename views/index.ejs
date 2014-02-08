@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tin Man</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="images/favicon.ico?v=2" />
+
+    <link href="stylesheets/main.css" rel="stylesheet">
+    <link href="stylesheets/bootstrap.css" rel="stylesheet">
+    <link href="stylesheets/scrollbar.css" rel="stylesheet">
+
+    <script src="javascripts/jquery-1.10.2.js"></script>
+    <script src="javascripts/angular.js"></script>
+    <script src="javascripts/underscore.js"></script>
+    <script src="javascripts/angular-route.js"></script>
+    <script src="javascripts/angular-sanitize.js"></script>
+    <script src="javascripts/bootstrap.js"></script>
+    <script src="javascripts/bootbox.js"></script>
+
+    <script src="javascripts/bootstrap.ui/ui-bootstrap-custom-0.10.0.js"></script>
+    <script src="javascripts/bootstrap.ui/ui-bootstrap-tpls-0.10.0.js"></script>
+ 
+    <script src="javascripts/game/main.js"></script>
+
+    <script src="javascripts/game/controllers/gamectrl.js"></script>
+    <script src="javascripts/game/directives/directives.js"></script>
+    <script src="javascripts/game/directives/console.js"></script>
+    <script src="javascripts/game/directives/commandline.js"></script>
+    <script src="javascripts/game/directives/angular.compilehtml.js"></script>
+
+    <script src="javascripts/game/services/events.js"></script>
+    <script src="javascripts/game/services/game.js"></script>
+    <script src="javascripts/game/services/bridge.js"></script>
+
+    <script src="javascripts/game/services/flashobjects/comms.js"></script>
+    <script src="javascripts/game/services/flashobjects/ensign.js"></script>
+    <script src="javascripts/game/services/flashobjects/engineering.js"></script>
+    <script src="javascripts/game/services/flashobjects/tactical.js"></script>
+    <script src="javascripts/game/services/flashobjects/science.js"></script>
+    <script src="javascripts/game/services/flashobjects/navigator.js"></script>
+    <script src="javascripts/game/services/flashobjects/alien.js"></script>
+
+    <style>
+        body {
+            padding-top: 60px;     
+        }
+    </style>
+  </head>
+  <body ng-app="Main">
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#/">Tin Man</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <ng-view></ng-view>
+        </div>
+  </body>
+</html>
