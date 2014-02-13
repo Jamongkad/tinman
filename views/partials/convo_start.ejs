@@ -4,7 +4,7 @@
 <div class="modal-body">
     <div ng-bind-html="text"></div>
 </div>
-<div class="modal-footer" style="text-align:left">
+<div ng-if="msg" class="modal-footer" style="text-align:left">
     <p ng-repeat="i in msg" >
         <a href="#" ng-click="action(i, $event)">{{i.options}}</a> 
     </p> 
