@@ -14,7 +14,7 @@ angular.module('Navigator', [])
     }
 
 
-    Navigator.prototype.speak = function() {
+    Navigator.prototype.order = function() {
         var modalInstance = $modal.open({
             templateUrl: '/convo/start'
           , controller: NavigatorCtrl 
@@ -23,7 +23,7 @@ angular.module('Navigator', [])
     
     Navigator.prototype.ai = function() {
         return {
-            "talk": this.speak
+            "order": this.order
           , "ship status": this.status
         }     
     }

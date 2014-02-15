@@ -12,9 +12,16 @@ angular.module('Ensign', [])
         }); 
     }
 
+    Ensign.prototype.order = function() { 
+        var modalInstance = $modal.open({
+            templateUrl: '/convo/start'
+          , controller: EnsignCtrl 
+        }); 
+    }
+
     Ensign.prototype.ai = function() {
         return {
-            "talk": this.speak
+            "order": this.order
           , "ship status": this.status
         }     
     }

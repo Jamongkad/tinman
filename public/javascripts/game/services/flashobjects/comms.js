@@ -9,7 +9,7 @@ angular.module('Comms', [])
         console.log("Hailing...");
     }
 
-    Comms.prototype.speak = function() { 
+    Comms.prototype.order = function() { 
         var modalInstance = $modal.open({
             templateUrl: '/convo/start'
           , controller: CommsCtrl 
@@ -25,7 +25,7 @@ angular.module('Comms', [])
 
     Comms.prototype.ai = function() {
         return {
-            "talk": this.speak
+            "order": this.order
           , "ship status": this.status
           , "hailing frequencies": this.hailing
         }     

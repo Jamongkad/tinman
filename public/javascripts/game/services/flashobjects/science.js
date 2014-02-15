@@ -6,6 +6,13 @@ angular.module('Science', [])
         this.name = "Science Officer Claire McAndrews";
     }
     
+    Science.prototype.order = function() { 
+        var modalInstance = $modal.open({
+            templateUrl: '/convo/start'
+          , controller: ScienceCtrl 
+        }); 
+    }
+
     Science.prototype.status = function() { 
         var modalInstance = $modal.open({
             templateUrl: '/convo/start'
@@ -22,7 +29,7 @@ angular.module('Science', [])
 
     Science.prototype.ai = function() {
         return {
-            "talk": this.speak
+            "order": this.order
           , "ship status": this.status
           , "analysis": this.analysis
         }     

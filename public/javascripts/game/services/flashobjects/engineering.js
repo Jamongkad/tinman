@@ -12,9 +12,16 @@ angular.module('Engineering', [])
         }); 
     }
 
+    Engineering.prototype.order = function() {
+        var modalInstance = $modal.open({
+            templateUrl: '/convo/start'
+          , controller: EngineeringCtrl 
+        }); 
+    }
+
     Engineering.prototype.ai = function() {
         return {
-            "talk": this.speak
+            "order": this.order
           , "engine room status": this.status
         }     
     }
