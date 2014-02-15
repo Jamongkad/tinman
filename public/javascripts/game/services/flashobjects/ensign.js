@@ -12,6 +12,13 @@ angular.module('Ensign', [])
         }); 
     }
 
+    Ensign.prototype.ai = function() {
+        return {
+            "talk": this.speak
+          , "ship status": this.status
+        }     
+    }
+
     return new Ensign();
 })
 

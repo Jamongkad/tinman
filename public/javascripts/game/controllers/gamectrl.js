@@ -16,7 +16,7 @@ function GameCtrl($scope, $http, Game, Events) {
     });
  
     $scope.$on('send-order', function(ev, val) {
-        $scope.actions = val;
+        $scope.obj = val; 
         $scope.msgs.unshift({'text': val.main.desc});   
     });
      

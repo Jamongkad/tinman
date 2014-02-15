@@ -6,10 +6,26 @@ angular.module('Navigator', [])
     }
 
     Navigator.prototype.status = function() {
+
+        var modalInstance = $modal.open({
+            templateUrl: '/convo/start'
+          , controller: NavigatorCtrl 
+        });        
+    }
+
+
+    Navigator.prototype.speak = function() {
         var modalInstance = $modal.open({
             templateUrl: '/convo/start'
           , controller: NavigatorCtrl 
         });
+    }
+    
+    Navigator.prototype.ai = function() {
+        return {
+            "talk": this.speak
+          , "ship status": this.status
+        }     
     }
 
     return new Navigator();

@@ -13,6 +13,21 @@ angular.module('Science', [])
         }); 
     }
 
+    Science.prototype.analysis = function() { 
+        var modalInstance = $modal.open({
+            templateUrl: '/convo/start'
+          , controller: ScienceCtrl 
+        }); 
+    }
+
+    Science.prototype.ai = function() {
+        return {
+            "talk": this.speak
+          , "ship status": this.status
+          , "analysis": this.analysis
+        }     
+    }
+
     return new Science();
 })
 

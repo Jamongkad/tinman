@@ -5,21 +5,12 @@ angular.module('Directives', ['console', 'commandline'])
       , templateUrl: "/game/buttons"
       , scope: { d: "=d" }
       , controller: function($scope, $element, $attrs) {
-            
-            //fires object action...
-            $scope.action = function(key) {
-                var d = $scope.d;
 
-                if(key in d.actions) {
-                    var func = d.actions[key];
-                    if(_.isFunction(func)) {
-                        func.call();     
-                    }                   
-                } 
-                //emits to events service
-                $scope.$emit('send-room-object', d);
-
-            }
+            $scope.action = function(action) {
+                if(_.isFunction(action)) {
+                    action();     
+                }   
+            }    
         }
       , link: function(scope, element, attrs) {}
     }

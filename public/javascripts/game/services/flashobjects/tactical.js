@@ -12,6 +12,21 @@ angular.module('Tactical', [])
         }); 
     }
 
+    Tactical.prototype.weapons = function() { 
+        var modalInstance = $modal.open({
+            templateUrl: '/convo/start'
+          , controller: TacticalCtrl 
+        }); 
+    }
+
+    Tactical.prototype.ai = function() {
+        return {
+            "talk": this.speak
+          , "ship status": this.status
+          , "weapons": this.weapons
+        }     
+    }
+
 
     return new Tactical();
 })

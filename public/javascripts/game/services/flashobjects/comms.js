@@ -23,6 +23,14 @@ angular.module('Comms', [])
         });
     }
 
+    Comms.prototype.ai = function() {
+        return {
+            "talk": this.speak
+          , "ship status": this.status
+          , "hailing frequencies": this.hailing
+        }     
+    }
+
     return new Comms();
 })
 

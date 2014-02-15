@@ -1,3 +1,4 @@
-<p ng-repeat="(key, value) in d.actions">
-    <button class="btn" ng-click="action(key)">{{key}} {{value}}</button>
+<p ng-repeat="(key, value) in d.main.ai()">
+    <button class="btn" ng-click="action(value)">{{key}}</button>
 </p>
+

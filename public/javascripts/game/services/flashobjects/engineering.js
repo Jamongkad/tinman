@@ -12,6 +12,13 @@ angular.module('Engineering', [])
         }); 
     }
 
+    Engineering.prototype.ai = function() {
+        return {
+            "talk": this.speak
+          , "engine room status": this.status
+        }     
+    }
+
     return new Engineering();
 })
 

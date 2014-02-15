@@ -2,55 +2,14 @@ angular.module('Bridge', ['Crew', 'Comms', 'Ensign', 'Engineering', 'Tactical', 
 .service('Bridge', function($rootScope, Crew, Navigator, Comms, Engineering, Science, Tactical, Ensign, Alien) { 
 
     var bridge = [
-        {   'id': 'crew'
-          , 'main': Crew
-          , 'action': {}
-        }
-      , {   'id': 'navigator'
-          , 'main': Navigator
-          , 'actions': {
-                'status': Navigator.status
-            }
-        }
-      , {   'id': 'ensign'
-          , 'main': Ensign
-          , 'actions': {
-                'status': Ensign.status
-            }
-        }
-      , {   'id': 'tactical'
-          , 'main': Tactical
-          , 'actions': {
-                'status': Tactical.status
-            }
-        }
-      , {   'id': 'science'
-          , 'main': Science
-          , 'actions': {
-                'status': Science.status
-            }
-        }
-      , {   'id': 'engineering'
-          , 'main': Engineering
-          , 'actions': {
-                'status': Engineering.status
-            }
-        }
-      , {   'id': 'comms'
-          , 'main': Comms
-          , 'actions': {
-                'hailing frequencies': Comms.hailing
-              , 'speak': Comms.speak
-              , 'status': Comms.status
-            }
-        }
-      , {   'id': 'alien'
-          , 'main': Alien
-          , 'actions': {
-                'speak': Alien.speak
-            }
-        }
-
+        { 'id': 'crew', 'main': Crew }
+      , { 'id': 'navigator', 'main': Navigator }
+      , { 'id': 'ensign', 'main': Ensign }
+      , { 'id': 'tactical', 'main': Tactical }
+      , { 'id': 'science', 'main': Science }
+      , { 'id': 'engineering', 'main': Engineering }
+      , { 'id': 'comms', 'main': Comms }
+      , { 'id': 'alien', 'main': Alien }
     ];
 
     return bridge;
