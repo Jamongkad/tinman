@@ -1,9 +1,3 @@
-April 5, 3114
-
-Captain's Log:
-We are sent on a search and retrieve mission to the Beta Node Star Cluster off Durin 5. Fleet Intelligence has received reports from neighboring way stations of an large 
-anomaly orbiting a collapsing star designated Entropy-2. The anomaly is carbon based with the following dimensions. 23 km long and 14 km wide. It's exterior is composed of 
-an unknown alloy that envelopes the entire structure tapering off into what looks like an single exhaust drive. We are currently 10 hrs away from the anomaly designated 
-CF-101. We haven't received any reports that CF-101 has left Entropy-2's orbit. Although we have to keep in mind that Entropy-2 is a collapsing star and we are at a risk of 
-getting caught in it's gravity well. Based on our current velocity and distance from our target. We have a window of 5 hours to search and retrieve CF-101. Our window is 
-tight. But I have faith in our crew that we will complete our mission. 
+The hum of the hyperdrive dies down, a slight deceleration can be felt as the stars on the front viewscreen become normal again. Routine system diagnostic readouts fill your 
+terminal as the Odessa drops out of hyperspace. Green means all systems are operating normally. It's time to start searching for CF-101. You look to <i>tactical</i> to 
+start a scanner sweep of the surrounding area. 

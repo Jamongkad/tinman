@@ -12,15 +12,18 @@ exports.convo_start = function(req, res) {
             + "LEFT JOIN dialog AS d ON d.id = dialog_node.topic_id "
             + "LEFT JOIN dialog AS a ON a.id = dialog_node.option_id "
             + "WHERE 1=1 "
-            + "AND dialog_node.topic_id = ? ";
+            + "AND dialog_node.topic_id = ? "
+            + "AND a.officer = ? "
+            + "AND dialog_node.group_id = ?";
 
     var id = req.params.id;
+    var officer = req.params.officer;
+    var group_id = req.params.group_id;
 
-    var query = client.query(sql, [id], function(err, results) {   
+    var query = client.query(sql, [id, officer, group_id], function(err, results) {   
         var d = _.groupBy(results, function(n) {
             return n.topic;   
         });
         res.json(d);
-    });
- 
+    }); 
 }

@@ -4,36 +4,37 @@ angular.module('Science', [])
     function Science() { 
         this.desc = "Science Officer Claire McAndrews (desc..)";
         this.name = "Science Officer Claire McAndrews";
+
+        Science.prototype.order = function() { 
+            var modalInstance = $modal.open({
+                templateUrl: '/convo/start'
+              , controller: ScienceCtrl 
+            }); 
+        }
+
+        Science.prototype.status = function() { 
+            var modalInstance = $modal.open({
+                templateUrl: '/convo/start'
+              , controller: ScienceCtrl 
+            }); 
+        }
+
+        Science.prototype.analysis = function() { 
+            var modalInstance = $modal.open({
+                templateUrl: '/convo/start'
+              , controller: ScienceCtrl 
+            }); 
+        }
+
+        Science.prototype.ai = function() {
+            return {
+                "order": this.order
+              , "ship status": this.status
+              , "analysis": this.analysis
+            }     
+        }
     }
     
-    Science.prototype.order = function() { 
-        var modalInstance = $modal.open({
-            templateUrl: '/convo/start'
-          , controller: ScienceCtrl 
-        }); 
-    }
-
-    Science.prototype.status = function() { 
-        var modalInstance = $modal.open({
-            templateUrl: '/convo/start'
-          , controller: ScienceCtrl 
-        }); 
-    }
-
-    Science.prototype.analysis = function() { 
-        var modalInstance = $modal.open({
-            templateUrl: '/convo/start'
-          , controller: ScienceCtrl 
-        }); 
-    }
-
-    Science.prototype.ai = function() {
-        return {
-            "order": this.order
-          , "ship status": this.status
-          , "analysis": this.analysis
-        }     
-    }
 
     return new Science();
 })

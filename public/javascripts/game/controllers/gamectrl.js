@@ -1,5 +1,5 @@
-function GameCtrl($scope, $http, Game, Events) {
-         
+function GameCtrl($scope, $http, Game, Events) {         
+
     //action repository so we can record the players actions
     $scope.playeractions = [];
     

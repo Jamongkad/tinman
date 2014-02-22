@@ -6,7 +6,7 @@ angular.module('Crew', [])
                   + "first humans to come into contact with a potentially new type of species excites you as well. As you were about to ponder into the "
                   + "deeper implications of discovering a new species and what it would mean for mankind. The audible beep of your navigation computer interrupts your " 
                   + "thoughts. The read outs are as plain as day. You have arrived in Durin 5. It's time to take the ship of out hyperspace and conduct a routine checkup "
-                  + "of it's systems.";
+                  + "of it's systems. <i>Navigation</i> Officer Anna Renkon is ready to take the Odessa out of hyperspace.";
         
         /*
         var timeout;

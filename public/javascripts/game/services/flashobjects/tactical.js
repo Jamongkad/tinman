@@ -31,6 +31,7 @@ angular.module('Tactical', [])
             "order": this.order
           , "ship status": this.status
           , "weapons": this.weapons
+          , "sensors": this.weapons
         }     
     }
 

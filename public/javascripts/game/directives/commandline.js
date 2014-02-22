@@ -14,7 +14,7 @@ angular.module('commandline', [])
                 var command  = commands[0];
                 var object   = commands[1];
 
-                if($scope.command != "" && object && (command == "report" || command == "inspect" || command == "talk" || command == "help")) {  
+                if($scope.command != "" && object && (command == "report" || command == "observe" || command == "talk" || command == "help")) {  
 
                     if(command == "report") { 
                         var find = _.find(Bridge, function(obj) { return obj.id == object; });
@@ -26,7 +26,7 @@ angular.module('commandline', [])
                         find.main.speak();
                     }
 
-                    if(command == "inspect") {
+                    if(command == "observe") {
                         var find = _.find(Bridge, function(obj) { return obj.id == object; });
                         $scope.$emit("send-order", find);
                     }

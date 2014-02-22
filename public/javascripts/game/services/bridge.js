@@ -3,7 +3,7 @@ angular.module('Bridge', ['Crew', 'Comms', 'Ensign', 'Engineering', 'Tactical', 
 
     var bridge = [
         { 'id': 'crew', 'main': Crew }
-      , { 'id': 'navigator', 'main': Navigator }
+      , { 'id': 'navigation', 'main': Navigator }
       , { 'id': 'ensign', 'main': Ensign }
       , { 'id': 'tactical', 'main': Tactical }
       , { 'id': 'science', 'main': Science }
