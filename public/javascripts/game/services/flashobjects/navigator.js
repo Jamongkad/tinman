@@ -6,6 +6,9 @@ angular.module('Navigator', [])
         this.desc = "Navigation Officer Anna Renkon (desc...)";
         this.name = "Navigation Officer Anna Renkon";
         this.out_of_hyperspace = false;        
+        this.topic_id = 0;
+
+        var that = this;
 
         Navigator.prototype.status = function() {
             var modalInstance = $modal.open({
@@ -15,6 +18,7 @@ angular.module('Navigator', [])
         }
 
         Navigator.prototype.order = function() {
+            that.topic_id = 1;
             var modalInstance = $modal.open({
                 templateUrl: '/convo/start'
               , controller: NavigatorCtrl
@@ -30,7 +34,7 @@ angular.module('Navigator', [])
         Navigator.prototype.ai = function() {
             return {
                 "order": this.order
-              , "ship status": this.status
+              //, "ship status": this.status
             }     
         }
     }
@@ -54,9 +58,9 @@ function NavigatorCtrl($scope, $modalInstance, $rootScope, $http, Navigator) {
     }
     
     if(Navigator.out_of_hyperspace == false) {
-        $scope.load_dialog(1, $scope.officer, 1);     
+        $scope.load_dialog(Navigator.topic_id, $scope.officer, 1);     
     } else { 
-        $scope.load_dialog(1, $scope.officer, 2);     
+        $scope.load_dialog(Navigator.topic_id, $scope.officer, 2);     
     }
    
     $scope.action = function(act, $event) {

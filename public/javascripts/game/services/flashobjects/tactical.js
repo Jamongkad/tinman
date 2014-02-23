@@ -8,7 +8,7 @@ angular.module('Tactical', [])
         var that = this;
 
         Tactical.prototype.order = function() { 
-            that.topic_id = 0;
+            that.topic_id = 6;
             var modalInstance = $modal.open({
                 templateUrl: '/convo/start'
               , controller: TacticalCtrl 
@@ -31,20 +31,11 @@ angular.module('Tactical', [])
             }); 
         }
 
-        Tactical.prototype.sensors = function() { 
-            that.topic_id = 6;
-            var modalInstance = $modal.open({
-                templateUrl: '/convo/start'
-              , controller: TacticalCtrl 
-            }); 
-        }
-
         Tactical.prototype.ai = function() {
             return {
                 "order": this.order
-              , "ship status": this.status
-              , "weapons": this.weapons
-              , "sensors": this.sensors
+              //, "ship status": this.status
+              , "weapons": this.weapons 
             }     
         }
 
@@ -66,9 +57,7 @@ function TacticalCtrl($scope, $modalInstance, $rootScope, $http, Tactical) {
             }
         }); 
     }
-
-    console.log(Tactical.topic_id);
-    
+ 
     $scope.load_dialog(Tactical.topic_id, $scope.officer, 1);     
    
     $scope.action = function(act, $event) {
