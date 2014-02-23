@@ -7,8 +7,6 @@ angular.module('Navigator', [])
         this.name = "Navigation Officer Anna Renkon";
         this.out_of_hyperspace = false;        
 
-        var me = this;
-
         Navigator.prototype.status = function() {
             var modalInstance = $modal.open({
                 templateUrl: '/convo/start'
