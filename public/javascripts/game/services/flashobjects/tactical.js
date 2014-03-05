@@ -1,9 +1,11 @@
 angular.module('Tactical', [])
 .service('Tactical', function($rootScope, $modal, $http) { 
     function Tactical() { 
+
         this.desc = "Lieutenant Commander Klein Jenkins (desc...)";
         this.name = "Lieutenant Commander Klein Jenkins";
         this.topic_id = 0;
+        this.conducting_search = false;
 
         var that = this;
 
@@ -13,6 +15,12 @@ angular.module('Tactical', [])
                 templateUrl: '/convo/start'
               , controller: TacticalCtrl 
             }); 
+        }
+
+        Tactical.prototype.narration = function(id) { 
+            $http.get('/narration/text/' + id + '/tactical').success(function(data) {
+                $rootScope.$broadcast("push-message", data.text);    
+            });
         }
 
         Tactical.prototype.status = function() { 
@@ -57,13 +65,23 @@ function TacticalCtrl($scope, $modalInstance, $rootScope, $http, Tactical) {
             }
         }); 
     }
- 
-    $scope.load_dialog(Tactical.topic_id, $scope.officer, 1);     
-   
+
+    if(Tactical.conducting_search == false) {
+        $scope.load_dialog(Tactical.topic_id, $scope.officer, 1);          
+    } else { 
+        $scope.load_dialog(Tactical.topic_id, $scope.officer, 2);          
+    }
+    
     $scope.action = function(act, $event) {
 
         if(act.to_node == 0) {
             $modalInstance.close(); 
+            
+            if(Tactical.conducting_search == false) {
+                Tactical.conducting_search = true;    
+                Tactical.narration(2);
+            }
+
         } else {
             $scope.load_dialog(act.to_node, $scope.officer, 1);     
         }
